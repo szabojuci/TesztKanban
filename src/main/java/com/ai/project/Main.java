@@ -1,62 +1,21 @@
 package com.ai.project;
 
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
-
 /**
- * GameFrame class represents the main window for the Snake Game.
- * It extends JFrame to provide the basic window functionality.
- */
-class GameFrame extends JFrame {
-
-    // --- Game Window Constants ---
-    public static final int BOARD_WIDTH = 600;  // Width of the game window in pixels
-    public static final int BOARD_HEIGHT = 600; // Height of the game window in pixels
-    public static final String GAME_TITLE = "Snake Game"; // Title displayed on the window
-
-    /**
-     * Constructs a new GameFrame, setting up its basic properties.
-     */
-    public GameFrame() {
-        // Set the title of the window
-        setTitle(GAME_TITLE);
-
-        // Set the size of the window
-        setSize(BOARD_WIDTH, BOARD_HEIGHT);
-
-        // Define the default close operation: exit the application when the window is closed
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Prevent the user from resizing the window, maintaining consistent game dimensions
-        setResizable(false);
-
-        // Center the window on the screen
-        setLocationRelativeTo(null);
-
-        // Make the window visible to the user
-        setVisible(true);
-    }
-}
-
-/**
- * Main class serves as the entry point for the Snake Game application.
- * It initializes and displays the game window.
+ * Main class to set up the Snake Game project and serve as the entry point.
+ * This class primarily confirms the project structure and environment are ready.
+ * Subsequent tasks will build upon this by initializing game components.
  */
 public class Main {
 
     /**
-     * The main method where the application execution begins.
-     * It ensures that the GUI creation is handled on the Event Dispatch Thread (EDT).
+     * The main method, serving as the entry point for the Snake Game application.
+     * It currently prints a confirmation message, indicating that the project
+     * setup is complete and the environment is ready for further development.
      *
      * @param args Command line arguments (not used in this application).
      */
     public static void main(String[] args) {
-        // Schedule a job for the Event Dispatch Thread (EDT):
-        // creating and showing the application's GUI.
-        // This is crucial for Swing applications to ensure thread safety
-        // and proper rendering of UI components.
-        SwingUtilities.invokeLater(() -> {
-            new GameFrame(); // Create and display the game window
-        });
+        System.out.println("Snake Game Project Setup Complete and Environment Ready!");
+        // In future tasks, the game window and main game loop will be initialized here.
     }
 }
